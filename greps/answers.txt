@@ -1,8 +1,40 @@
 # Part 1
 ### a)
+ggrep "butt" filescan_00.1 > ../captured/butterfree.txt
 
+ggrep "bulb" filescan_00.1 > ../captured/bulbasaur.txt
 
+ggrep "blas" filescan_00.1 > ../captured/blastoise.txt
 
+ggrep "beed" filescan_00.1 > ../captured/beedrill.txt
+
+-------------------------------------------------------------------
+
+ggrep '^char.*izard$' filescan_00.2 > ../captured/charizard.txt
+
+ggrep '^char.*meleon$' filescan_00.2 > ../captured/charmeleon.txt
+
+ggrep '^char.*mander$' filescan_00.2  > ../captured/charmander.txt
+
+-------------------------------------------------------------------
+
+ggrep '^pika.*chu$' filescan_00.3  > ../captured/pikachu.txt
+
+ggrep '.aur$' filescan_00.3  > ../captured/ivysaur.txt
+
+ggrep 'jigg' filescan_00.3  > ../captured/jigglypuff.txt
+
+ggrep 'meow' filescan_00.3  > ../captured/meowth.txt
+
+--------------------------------------------------------------------
+
+ggrep 'wart' filescan_00.4 > ../captured/wartortle.txt
+
+ggrep 'psyd' filescan_00.4 > ../captured/psyduck.txt
+
+ggrep 'squi' filescan_00.4 > ../captured/squirtle.txt
+
+ggrep 'venu' filescan_00.4 > ../captured/venusaur.txt
 
 ### b)
 
@@ -15,22 +47,40 @@
 
 
 
-
-
-
-
-
-
-
 # Part 2
 ### a)
-
-
-
+16 pokemons
+ggrep -oE '^\w+' filescan_00.* | sort | uniq | wc -l
 
 
 
 ### b)
+ggrep -oE '^\w+' filescan_00.* | sort | uniq -c
+    40 filescan_00.1:beed
+  38 filescan_00.1:blas
+  30 filescan_00.1:bulb
+  38 filescan_00.1:butt
+ 113 filescan_00.2:char
+  33 filescan_00.3:ivys
+  34 filescan_00.3:jigg
+  32 filescan_00.3:meow
+   1 filescan_00.3:meow___
+  39 filescan_00.3:pika
+   1 filescan_00.3:pikaquu
+  36 filescan_00.4:psyd
+   1 filescan_00.4:psydj
+  34 filescan_00.4:squi
+  32 filescan_00.4:venu
+  37 filescan_00.4:wart
+
+
+ggrep -oE '\w+$' filescan_00.2 | sort | uniq -c
+  40 izard
+  36 mander
+  37 meleon
+
+  Answer: beedrill with 40 lines
+            charizard with 40 lines
 
 
 
